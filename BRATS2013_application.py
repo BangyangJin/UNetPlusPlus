@@ -16,11 +16,13 @@ CUDA_VISIBLE_DEVICES=2 python -W ignore BRATS2013_application.py \
 # tensorflow-gpu==1.4.1
 from __future__ import print_function
 import warnings
+#忽略警告
 warnings.filterwarnings('ignore')
 import os
 import keras
 print("Keras = {}".format(keras.__version__))
 import tensorflow as tf
+#设置通知权限
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # or any {'0', '1', '2'}
 from tqdm import tqdm
 import matplotlib.pyplot as plt
@@ -43,7 +45,8 @@ from segmentation_models import Nestnet, Unet, Xnet
 from helper_functions import *
 from keras.utils import plot_model
 
-sys.setrecursionlimit(40000)
+#设置最大递归次数
+sys.setrecursionlimit(40000) 
 
 parser = OptionParser()
 
