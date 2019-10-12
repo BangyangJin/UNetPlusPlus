@@ -40,7 +40,10 @@ from random import shuffle
 from keras.callbacks import LambdaCallback, TensorBoard
 from glob import glob
 from skimage.transform import resize
+
+#python内建模块 处理命令行参数
 from optparse import OptionParser
+
 from segmentation_models import Nestnet, Unet, Xnet
 from helper_functions import *
 from keras.utils import plot_model
